@@ -37,15 +37,15 @@ class OrderTest {
     }
 
     @Test
-    public void shouldOrder() {
+   public void shouldOrder() {
         WebElement form = driver.findElement(By.cssSelector(".form"));
         form.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Горбачева Анна");
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79000000000");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector(".button")).click();
 
-        String text = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText();
-        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с нами в ближайшее время.", text.trim());
+       String text = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText();
+       assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с нами в ближайшее время.", text.trim());
     }
 }
 
